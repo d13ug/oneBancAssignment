@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>OneBanc Assignment</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="name">
+      <div class="heading_container">
+        <div class="back_button">
+          <i class="fa fa-arrow-left" style="cursor: pointer;" onclick="universalclose()"></i>
+        </div>
+        <div class="logo_button">
+          <button class="logo_name">J</button>
+        </div>
+        <div class="customer_detail">
+          <div class="customer">John Doe</div>
+          <div class="mobile">+91 9462260562</div>
+        </div>
+      </div>
+    </div>
+    <div class="transactions">
+      <div class="transaction-container">
+        <div class="transaction_details">
+
+          <div class="separator" id="separator">Date</div>
+          <div class="transaction_history1" onclick="show1()">
+            <i class="fa fa-rupee"></i>
+            <span id="amount1">250</span>
+            <span class="status"><i class="fa fa-check" style="color: rgb(133, 233, 133);"></i>Sent</span>
+            <i class="fa fa-angle-right"></i>
+          </div>
+          <div class="time" id="time1" style="margin-left: 210px;"></div>
+
+
+          <div class="separator" id="separator1">Date</div>
+          <div class="transaction_history2" onclick="show2()">
+            <i class="fa fa-rupee"></i>
+            <span id="amount2">760</span>
+            <span class="status"><i class="fa fa-dot-circle-o" style="margin-right: 5px;"></i>Receieved</span>
+            <i class="fa fa-angle-right"></i>
+          </div>
+          <div class="time" id="time2" style="margin-left: 10px;"></div>
+
+
+          <div class="separator" id="separator2">Date</div>
+          <div class="transaction_history3" onclick="show3()">
+            <i class="fa fa-rupee"></i>
+            <span id="amount3">1000</span>
+            <span class="status" style="margin-left: 20px;"><i class="fa fa-dot-circle-o"
+                style="margin-right: 5px;"></i>Receieved</span>
+            <i class="fa fa-angle-right"></i>
+            <div class="button">
+              <input type="button" value="Pay">
+              <input type="button" value="Reject">
+            </div>
+          </div>
+          <div class="time" id="time3" style="margin-left: 10px;"></div>
+
+
+          <div class="separator" id="separator3">Date</div>
+          <div class="transaction_history4" onclick="show4()">
+            <i class="fa fa-rupee"></i>
+            <span id="amount4">1000</span>
+            <span class="status"><i class="fa fa-check" style="color: rgb(133, 233, 133);"></i>Sent</span>
+            <i class="fa fa-angle-right"></i>
+            <div class="cancel">
+              <input type="button" class="cancel" value="Cancel">
+
+            </div>
+          </div>
+          <div class="time" id="time4" style="margin-left: 210px;"></div>
+        </div>
+
+      </div>
+    </div>
+    <div class="detail_tansaction_container">
+      <div class="detail1 hide_details">
+        <div class="heading">
+          Transaction Details
+        </div>
+        <table>
+          <tr>
+            <th>Id</th>
+            <td>1958</td>
+          </tr>
+          <tr>
+            <th>Start Date:</th>
+            <td>2021-02-24,21:28:00 PM</td>
+          </tr>
+          <tr>
+            <th>End Date:</th>
+            <td>0001-01-01,00:00:00 PM</td>
+          </tr>
+          <tr>
+            <th>Amount</th>
+            <td>250.0</td>
+          </tr>
+          <tr>
+            <th>Direction</th>
+            <td>Sent</td>
+          </tr>
+          <tr>
+            <th>Status</th>
+            <td>Pending</td>
+          </tr>
+          <tr>
+            <th>Type</th>
+            <td>Collect</td>
+          </tr>
+          <tr>
+            <th>Description</th>
+            <td>None</td>
+          </tr>
+          <tr>
+            <th>vPayId</th>
+            <td>1</td>
+          </tr>
+          <tr>
+            <th>vPay</th>
+            <td>manindersingh@onebanc</td>
+          </tr>
+          <tr>
+            <th>Account Number</th>
+            <td>8787687698769</td>
+          </tr>
+          <tr>
+            <th>IFSC Code</th>
+            <td>KKBK88977</td>
+          </tr>
+          <tr>
+            <th>Partner UPI</th>
+          </tr>
+          <tr>
+            <th>PartnerVpayId</th>
+            <td>2</td>
+          </tr>
+          <tr>
+            <th>PartnerVpay</th>
+            <td>johnDoe@oenabanc</td>
+          </tr>
+        </table>
+        <div class="close_button">
+          <button id="close_button" onclick="close1()"><i class="fa fa-close" style="font-size: 25px;"></i></button>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="detail_tansaction_container1">
+      <div class="detail2 hide_details">
+        <div class="heading">
+          Transaction Details
+        </div>
+        <table>
+          <tr>
+            <th>Id</th>
+            <td>1959</td>
+          </tr>
+          <tr>
+            <th>Start Date:</th>
+            <td>2021-02-25,00:00:00 PM</td>
+          </tr>
+          <tr>
+            <th>End Date:</th>
+            <td>0001-01-01,00:00:00 PM</td>
+          </tr>
+          <tr>
+            <th>Amount</th>
+            <td>760.0</td>
+          </tr>
+          <tr>
+            <th>Direction</th>
+            <td>Recieved</td>
+          </tr>
+          <tr>
+            <th>Status</th>
+            <td>Conformed</td>
+          </tr>
+          <tr>
+            <th>Type</th>
+            <td>Pay</td>
+          </tr>
+          <tr>
+            <th>Description</th>
+            <td>None</td>
+          </tr>
+          <tr>
+            <th>vPayId</th>
+            <td>1</td>
+          </tr>
+          <tr>
+            <th>vPay</th>
+            <td>manindersingh@onebanc</td>
+          </tr>
+          <tr>
+            <th>Account Number</th>
+            <td>8787687698769</td>
+          </tr>
+          <tr>
+            <th>ifscCode</th>
+            <td>KKBK88977</td>
+          </tr>
+          <tr>
+            <th>Partner UPI</th>
+          </tr>
+          <tr>
+            <th>PartnerVpayId</th>
+            <td>2</td>
+          </tr>
+          <tr>
+            <th>PartnerVpay</th>
+            <td>johnDoe@oenabanc</td>
+          </tr>
+        </table>
+        <div class="close_button">
+          <button id="close_button" onclick="close2()"><i class="fa fa-close" style="font-size: 25px;"></i></button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="detail_tansaction_container2">
+      <div class="detail3 hide_details">
+        <div class="heading">
+          Transaction Details
+        </div>
+        <table>
+          <tr>
+            <th>Id</th>
+            <td>1960</td>
+          </tr>
+          <tr>
+            <th>Start Date:</th>
+            <td>2021-02-25,21:28:40 PM</td>
+          </tr>
+          <tr>
+            <th>End Date:</th>
+            <td>0001-01-01,00:00:00 PM</td>
+          </tr>
+          <tr>
+            <th>Amount</th>
+            <td>1000.0</td>
+          </tr>
+          <tr>
+            <th>Direction</th>
+            <td>Recieved</td>
+          </tr>
+          <tr>
+            <th>Status</th>
+            <td>Pending</td>
+          </tr>
+          <tr>
+            <th>Type</th>
+            <td>Collect</td>
+          </tr>
+          <tr>
+            <th>Description</th>
+            <td>Food</td>
+          </tr>
+          <tr>
+            <th>vPayId</th>
+            <td>1</td>
+          </tr>
+          <tr>
+            <th>vPay</th>
+            <td>manindersingh@onebanc</td>
+          </tr>
+          <tr>
+            <th>Account Number</th>
+            <td>8787687698769</td>
+          </tr>
+          <tr>
+            <th>IFSC Code</th>
+            <td>KKBK88977</td>
+          </tr>
+          <tr>
+            <th>Partner UPI</th>
+          </tr>
+          <tr>
+            <th>PartnerVpayId</th>
+            <td>2</td>
+          </tr>
+          <tr>
+            <th>PartnerVpay</th>
+            <td>johnDoe@oenabanc</td>
+          </tr>
+        </table>
+        <div class="close_button">
+          <button id="close_button" onclick="close3()"><i class="fa fa-close" style="font-size: 25px;"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="detail_tansaction_container3">
+      <div class="detail4 hide_details">
+        <div class="heading">
+          Transaction Details
+        </div>
+        <table>
+          <tr>
+            <th>Id</th>
+            <td>1961</td>
+          </tr>
+          <tr>
+            <th>Start Date:</th>
+            <td>2021-02-27,22:24:40 PM</td>
+          </tr>
+          <tr>
+            <th>End Date:</th>
+            <td>2021-02-27T22:24:40 PM</td>
+          </tr>
+          <tr>
+            <th>Amount</th>
+            <td>1000.0</td>
+          </tr>
+          <tr>
+            <th>Direction</th>
+            <td>Sent</td>
+          </tr>
+          <tr>
+            <th>Status</th>
+            <td>Conformed</td>
+          </tr>
+          <tr>
+            <th>Type</th>
+            <td>Pay</td>
+          </tr>
+          <tr>
+            <th>Description</th>
+            <td>Rent</td>
+          </tr>
+          <tr>
+            <th>vPayId</th>
+            <td>1</td>
+          </tr>
+          <tr>
+            <th>vPay</th>
+            <td>manindersingh@onebanc</td>
+          </tr>
+          <tr>
+            <th>Account Number</th>
+            <td>8787687698769</td>
+          </tr>
+          <tr>
+            <th>IFSC Code</th>
+            <td>KKBK88977</td>
+          </tr>
+          <tr>
+            <th>Partner UPI</th>
+          </tr>
+          <tr>
+            <th>PartnerVpayId</th>
+            <td>2</td>
+          </tr>
+          <tr>
+            <th>PartnerVpay</th>
+            <td>johnDoe@oenabanc</td>
+          </tr>
+        </table>
+        <div class="close_button">
+          <button id="close_button" onclick="close4()"><i class="fa fa-close" style="font-size: 25px;"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
